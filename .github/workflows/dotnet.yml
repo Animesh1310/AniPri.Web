@@ -12,7 +12,7 @@ jobs:
         - name: Setup .NET Core
           uses: actions/setup-dotnet@v2
           with:
-            dotnet-version: 3.1.x
+            dotnet-version: 5.0
 
         # Run tests
         - name: Test
@@ -20,7 +20,7 @@ jobs:
 
         # Generate the website
         - name: Publish
-          run: dotnet publish \AniPriWeb.Web\AniPriWeb.Web.csproj --configuration Release
+          run: dotnet publish AniPriWeb.Web.csproj --configuration Release
 
         # Publish the website
         - name: GitHub Pages action
